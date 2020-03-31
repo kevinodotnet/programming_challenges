@@ -1,0 +1,61 @@
+<!--
+
+Challenges:
+
+1) Change the background colour of the "BODY" to red by changing "c0c0c0" to some other values.
+
+2) Use <center> to stick the smiley face in the middle of the screen.
+
+3) Uncomment the "style" of the pictures and mess with the width/height to mess with the faces.
+
+4) Uncomment the "alerts" to say things.
+
+-->
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: #c0c0c0;
+        }
+
+        #smile_picture {
+            /*
+            width: 100%;
+            height: 10%;
+             */
+        }
+
+        #other_picture {
+            display: none;
+            /*
+            width: 100%;
+            height: 10%;
+             */
+        }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <img id="smile_picture" src="smile.webp"/>
+    <img id="other_picture" src="unnamed.jpg"/>
+</div>
+
+<script>
+    $('#smile_picture').click(function () {
+        // alert("Bye! Here comes a new face!");
+        $('#smile_picture').hide();
+        $('#other_picture').show();
+    });
+    $('#other_picture').click(function () {
+        // alert("Hi! Old face is back!");
+        $('#other_picture').hide();
+        $('#smile_picture').show();
+    });
+</script>
+</body>
+</html>

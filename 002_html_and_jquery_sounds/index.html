@@ -1,0 +1,80 @@
+<!--
+
+Play with butts.
+- click them. 
+- change the numbers, what happens? 
+
+Read https://github.com/escottalexander/simpleTones.js for instructions on what you can so with the Simple Tones library.
+
+playTone("Cm", "sine");
+playTone("Eb4", "square");
+playTone("A#6", "triangle");
+playTone("E", "sawtooth");
+
+Connect new actions to the other butts. 
+
+-->
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+		<script src="simpleTones.js"></script>
+    <style>
+		body {
+			margin-top: 200px;
+		}
+		button {
+			width: 100px;
+			height: 100px;
+		}
+    </style>
+</head>
+
+<body>
+
+<center>
+<button id="butt1">butt1</button>
+<button id="butt2">butt2</button>
+<button id="butt3">butt3</button>
+<br/>
+<button id="butt4">butt4</button>
+<button id="butt5">butt5</button>
+<button id="butt6">butt6</button>
+<br/>
+<button id="butt7">butt7</button>
+<button id="butt8">butt8</button>
+<button id="butt9">butt9</button>
+</center>
+
+<script>
+    $('#butt1').click(function () {
+			playSound("buzzer")
+    });
+    $('#butt2').click(function () {
+			playSound("sine", 440, 2.5, 220, 0.8);
+    });
+    $('#butt3').click(function () {
+			playSound("sine", 440, 2.5, 220, 0.8, 440, 1.4);
+    });
+    $('#butt4').click(function () {
+			playTone("C");
+    });
+    $('#butt5').click(function () {
+			// playSound("buzzer")
+    });
+    $('#butt6').click(function () {
+			// playSound("buzzer")
+    });
+    $('#butt7').click(function () {
+			// playSound("buzzer")
+    });
+    $('#butt8').click(function () {
+			// playSound("buzzer")
+    });
+    $('#butt9').click(function () {
+			// playSound("buzzer")
+    });
+</script>
+</body>
+</html>
